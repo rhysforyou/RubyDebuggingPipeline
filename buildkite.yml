@@ -1,0 +1,7 @@
+steps:
+  - label: ":ruby: Run Tests"
+    command:
+      - bundle install
+      - bundle exec rake test
+    agents:
+      queue: debugging
