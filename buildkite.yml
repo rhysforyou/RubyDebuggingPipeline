@@ -4,6 +4,7 @@ steps:
     command:
       - echo $PATH
       - which ruby
+      - which bundle
     agents:
       queue: debugging
 
