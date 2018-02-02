@@ -1,7 +1,14 @@
 steps:
+
+  - label: ":bash: Print Environment Variables"
+    command:
+      - echo $PATH
+      - which ruby
+    agents:
+      queue: debugging
+
   - label: ":ruby: Run Tests"
     command:
-      - bundle install
-      - bundle exec rake test
+      - bundle install && bundle exec rake test
     agents:
       queue: debugging
